@@ -1,0 +1,19 @@
+
+body {
+    padding-top: 60px;
+    background-image: url('https://i.pinimg.com/736x/43/62/a4/4362a41797459f7c0d8b4a77746db001.jpg');
+    text-align: center;
+    background-repeat: false;
+    background-size: cover;
+
+
+}
+
+#reg {
+    display: none;
+    opacity: 20;
+}
+
+#login {
+    display: none;
+}

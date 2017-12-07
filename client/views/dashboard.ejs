@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        
+    <title>Dashboard</title>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>dashboard!</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/jquery_file.js"></script>
+        
 </head>
 <body>
-    <h1>Welcome <%= user.first_name %> <%= user.last_name %></h1>
-    <h3>You have successfully <%= message %></h3>
+    <div class="container">
+        <div class="col s12 m6">
+            <h1 class = "card-panel grey">Welcome <%= user.first_name %> <%= user.last_name %>
+            <h3 class = "card-panel green">You are logged in, you may log out below.</h3>
+        </div>
+        
 
-    <button><a href="/logout">LOGOUT</a></button>
+        <a href="/logout"><button class="btn btn-floating btn-large pulse black">
+            <i class="material-icons">send<i></button></a>
+    </div>
 </body>
 </html>
