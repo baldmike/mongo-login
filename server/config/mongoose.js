@@ -2,7 +2,9 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
 
-mongoose.connect('mongodb://localhost/login_reg_mongo');
+mongoose.connect('mongodb://localhost/loginMongo');
+
+console.log("CONNECTED TO THE MONGOOSE");
 
 var models_path = path.join(__dirname, './../models');
 

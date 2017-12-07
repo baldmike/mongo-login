@@ -1,11 +1,11 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const session = require('express-session')
+var express = require('express');
+var path = require('path');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
-mongoose.Promise = global.Promise
+// mongoose.Promise = global.Promise
 
-const port = process.env.PORT || 8080;
+var port = process.env.PORT || 8080;
 
 var app = express();
 

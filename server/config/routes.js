@@ -14,7 +14,7 @@ module.exports = function(app) {
         users.login(req, res);
     });
 
-    app.get('/success', function(req, res){
-        res.render('success', {user: req.session.user, message: req.session.message});
+    app.get('/dashboard', function(req, res){
+        res.render('dashboard', {user: req.session.user, message: req.session.message});
     });
 };

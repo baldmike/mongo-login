@@ -22,7 +22,7 @@ module.exports = {
                 else {
                     req.session.user = user;
                     req.session.message = 'registered';
-                    res.redirect('/success');
+                    res.redirect('/dashboard');
                 }
             });
         }
@@ -41,7 +41,7 @@ module.exports = {
                 if(bcrypt.compareSync(req.body.password, user.password)) {
                     req.session.user = user;
                     req.session.message = 'logged in';
-                    res.redirect('/success');
+                    res.redirect('/dashboard');
                 } else {
                     req.session.errors = {'login_password': {'message': 'Incorrect password.'}};
                     res.redirect('/');
