@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 
@@ -5,7 +7,7 @@ var UserSchema = new mongoose.Schema({
     first_name: { 
         type: String, 
         required: [true, 'First name is required'], 
-        minlength: [4, 'First name must be at least 4 characters']
+        minlength: [2, 'First name must be at least 2 characters']
     }, 
     last_name: { 
         type: String, 

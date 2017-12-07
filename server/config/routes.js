@@ -14,6 +14,11 @@ module.exports = function(app) {
         users.login(req, res);
     });
 
+    app.get('/logout', function(req, res){
+        req.session.destroy();
+        res.redirect('/');
+    });
+
     app.get('/dashboard', function(req, res){
         res.render('dashboard', {user: req.session.user, message: req.session.message});
     });

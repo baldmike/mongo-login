@@ -4,6 +4,8 @@ var User = mongoose.model('User');
 
 module.exports = {
     create: function(req, res){
+        hash = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8));
+
         if (req.body.password != req.body.confirm){
             req.session.errors = {'confirm': {'message': 'Passwords do not match'}};
             res.redirect('/');
@@ -12,7 +14,7 @@ module.exports = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
                 email: req.body.email,
-                password: req.body.password,
+                password: hash,
             });
             user.save(function(err){
                 if(err){
